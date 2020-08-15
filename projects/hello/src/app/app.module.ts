@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FunkycasePipe } from './funkycase.pipe';
+import { FoobarComponent } from './foobar/foobar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FunkycasePipe
+    FunkycasePipe,
+    FoobarComponent
   ],
   imports: [
     BrowserModule

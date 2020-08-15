@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
       <p>{{ name | funkycase }}</p>
       <p>{{ currentTime | date: 'h:mm a on MMMM d, y' }}</p>
     </div>
+
+    <app-foobar></app-foobar>
   `,
   styles: ['h1 { color: darkred; }'],
 })
