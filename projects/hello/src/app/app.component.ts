@@ -10,10 +10,21 @@ import { Component } from '@angular/core';
     </div>
 
     <app-foobar></app-foobar>
+    <app-baz [msg]="msgIn" (nameSelected)="onNameSelected($event)"></app-baz>
+    <p>
+      Name received from the baz component:<br />
+      <code>{{ nameOut }}</code>
+    </p>
   `,
   styles: ['h1 { color: darkred; }'],
 })
 export class AppComponent {
   name = 'world';
   currentTime = Date();
+  msgIn = 'Please enter your name';
+  nameOut = '<No Ourput from child component yet>';
+
+  onNameSelected(name: string) {
+    this.nameOut = name;
+  }
 }
